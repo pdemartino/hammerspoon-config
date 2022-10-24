@@ -35,14 +35,3 @@ hs.hotkey.bind(screen_mod, "Right", function() hs.window.focusedWindow():moveOne
 hs.hotkey.bind(screen_mod, "Up", function() hs.window.focusedWindow():moveOneScreenNorth() end)
 hs.hotkey.bind(screen_mod, "Down", function() hs.window.focusedWindow():moveOneScreenSud() end)
 
-
-local choices = {
-    {text="primo", subText = "Prima Selezione"},
-    {text="secondo", subText = "Seconda Selezione"}
-}
-
-function choiceCallBack(choice)
-    hs.alert(choice)
-end
-
-hs.hotkey.bind(application_mod, "p", function() hs.chooser.new(choiceCallBack):choices(choices):show() end)
